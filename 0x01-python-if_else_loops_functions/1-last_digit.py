@@ -5,7 +5,7 @@ d = abs(number) % 10
 if number < 0:
     d = d * -1
 if d > 5:
-    print("Last digit of {:d} is {:d} and is grater than 5".format(number, d))
+    print("Last digit of {:d} is {:d} and is greater than 5".format(number, d))
 elif d == 0:
     print("Last digit of {:d} is {:d} and is 0".format(number, d))
 else:
