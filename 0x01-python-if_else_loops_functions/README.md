@@ -14,3 +14,5 @@
 11. Write a function that computes a to the power of b and return the value.
 12. Write a function that prints the numbers from 1 to 100 separated by a space.
 13. Write a function in C that inserts a number into a sorted singly linked list.
+14. Write a program that prints the ASCII alphabet, in reverse order, alternating lowercase and uppercase.
+15. Write a function that creates a copy of the string, removing the character at the position n.
