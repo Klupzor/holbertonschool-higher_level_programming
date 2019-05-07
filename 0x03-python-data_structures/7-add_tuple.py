@@ -2,7 +2,7 @@
 def add_tuple(tuple_a=(), tuple_b=()):
     a = list(tuple_a)
     b = list(tuple_b)
-    r=[0, 0]
+    r = [0, 0]
     a.append(0)
     a.append(0)
     b.append(0)
