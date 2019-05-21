@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 class Square:
     def __init__(self, size=0):
         self.size = size
@@ -9,7 +10,7 @@ class Square:
 
     @property
     def size(self):
-            return self.__size
+        return self.__size
 
     @size.setter
     def size(self, value):
