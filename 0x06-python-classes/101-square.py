@@ -26,7 +26,8 @@ class Square:
 
     @property
     def size(self):
-            return self.__size
+        return self.__size
+
     @property
     def position(self):
         return self.__position
