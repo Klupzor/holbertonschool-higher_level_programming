@@ -7,7 +7,19 @@ class Square:
         self.position = position
 
     def __str__(self):
-        return self.my_print()
+        msg = ""
+        if self.size == 0:
+            return "/n"
+        for e in range(self.position[1]):
+            msg = msg + "\n"
+        for i in range(self.size):
+            for s in range(self.position[0]):
+                msg = msg + " "
+            for j in range(self.size):
+                msg = msg + "#"
+            if i < self.size - 1:
+                msg = msg + "\n"
+        return msg
 
     def area(self):
         return self.__size * self.__size
