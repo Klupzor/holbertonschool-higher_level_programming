@@ -1,0 +1,32 @@
+#!/usr/bin/python3
+import dis, math
+
+
+class MagicClass:
+
+    def __init__(self, radius):
+        self.__radius = 0
+        if type(radius) is not int and type(radius) is not float:
+            raise TypeError("radius must be a number")
+        self.__radius = radius                                                              |             72 RETURN_VALUE
+    def __init__(self, radius):                                   |
+        self.__radius = 0                                         |Disassembly of area:
+        if type(radius) is not int and type(radius) is not float: | 15           0 LOAD_FAST                0 (self)
+            raise TypeError("radius must be a number")            |              3 LOAD_ATTR                0 (_MagicClass__radius)
+        self.__radius = radius                                    |              6 LOAD_CONST               1 (2)
+                                                                  |              9 BINARY_POWER
+    def area(self):                                               |             10 LOAD_GLOBAL              1 (math)
+        return (self.__radius ** 2) * math.pi                     |             13 LOAD_ATTR                2 (pi)
+                                                                  |             16 BINARY_MULTIPLY
+    def circumference(self):                                      |             17 RETURN_VALUE
+        return 2 * math.pi * self.__radius                        |
+                                                                  |Disassembly of circumference:
+dis.dis(MagicClass)
+
+    def area(self):
+        return (self.__radius ** 2) * math.pi
+
+    def circumference(self):
+        return 2 * math.pi * self.__radius
+
+dis.dis(MagicClass)
