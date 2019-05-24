@@ -1,9 +1,24 @@
 #!/usr/bin/python3
+"""Print square
+This script  prints a square
+"""
 
 
 def print_square(size):
+    """Function that prints a square with the character #
 
-    if type(size) !=  int:
+    Parameters
+    ----------
+    size : int
+        The size length of the square
+
+    Raises
+    ----------
+    TypeError
+        size must be a integer and > 0
+
+    """
+    if type(size) != int:
         raise TypeError("size must be an integer")
     if size < 0:
         raise ValueError("size must be >= 0")
