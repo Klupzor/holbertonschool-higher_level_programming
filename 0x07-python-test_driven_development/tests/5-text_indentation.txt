@@ -1,0 +1,44 @@
+===============================
+ Test 5-text_indentation.py
+ ===============================
+
+ This library is very simple, since it only has one function called
+ ``def text_indentation(text)``.
+
+ Numbers
+ =======
+
+::
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+	>>> text_indentation(23)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+	>>> text_indentation("hola. Mundo")
+	hola.
+	<BLANKLINE>
+	Mundo
+
+	>>> text_indentation("hi.     Mundo")
+	hi.
+	<BLANKLINE>
+	Mundo
+
+	>>> text_indentation("     hi.     Mundo")
+	hi.
+	<BLANKLINE>
+	Mundo
+
+	>>> text_indentation(". :?   : .    Mundo")
+	.
+	<BLANKLINE>
+	:
+	<BLANKLINE>
+	?
+	<BLANKLINE>
+	:
+	<BLANKLINE>
+	.
+	<BLANKLINE>
+	Mundo

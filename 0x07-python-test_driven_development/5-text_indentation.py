@@ -24,12 +24,15 @@ def text_indentation(text):
     if type(text) != str:
         raise TypeError("text must be a string")
     else:
+        while text[i] == " ":
+            i += 1
         while i < len(text):
+
             c = text[i]
             print(c, end="")
             if c == "." or c == "?" or c == ":":
                 print()
                 print()
-                if text[i + 1] == " ":
+                while text[i + 1] == " ":
                     i += 1
             i += 1

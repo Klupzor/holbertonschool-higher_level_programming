@@ -27,7 +27,7 @@ def matrix_divided(matrix, div):
         A new matrix
     """
     ms = ["matrix must be a matrix (list of lists) of integers/floats",
-            "Each row of the matrix must have the same size"]
+          "Each row of the matrix must have the same size"]
     for li in matrix:
         if type(li) != list:
             raise TypeError(ms[0])
@@ -38,7 +38,7 @@ def matrix_divided(matrix, div):
     for row in matrix:
         if not len(row) == len(matrix[0]):
             raise TypeError(ms[1])
-        if not all(isinstance(i, (int, float)) for i in row): 
+        if not all(isinstance(i, (int, float)) for i in row):
             raise TypeError(ms[0])
 
     return list(map(lambda array: list(map(lambda num:
