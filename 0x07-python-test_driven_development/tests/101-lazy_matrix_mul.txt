@@ -1,0 +1,21 @@
+===============================
+ Test 101-lazy_matrix_mul.py
+ ===============================
+
+ This library is very simple, since it only has one function called
+ ``lazy_matrix_mul(m_a, m_b)``.
+
+ Numbers
+ =======
+
+::
+
+	lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+	>>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+	[[7, 10], [15, 22]]
+
+Errors
+=======
+	>>> matrix_mul([1, 2], [[1, 2], [3, 4]])
+	Traceback (most recent call last):
+	TypeError: m_a must be a list of lists
