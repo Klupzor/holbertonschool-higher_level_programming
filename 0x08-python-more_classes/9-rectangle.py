@@ -79,4 +79,7 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return 0
         return (self.__height * 2 ) + (self.__width * 2)
-        
+
+    @classmethod
+    def square(cls, size=0):
+        return cls(size, size)
