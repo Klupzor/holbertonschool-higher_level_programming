@@ -1,0 +1,80 @@
+===============================
+ Test 9-rectangle.py
+===============================
+
+ This library is very simple, since it only has one class called
+ ``def width(self, value)``.
+
+Command to run check: python3 -m doctest -v ./tests/rectangle.txt
+
+ Import
+ =======
+::
+	>>> Rectangle = __import__('4-rectangle').Rectangle
+
+Simple rectangle
+================
+	>>> rect = Rectangle("f", 4)
+	Traceback (most recent call last):
+    	TypeError: width must be an integer
+
+	>>> rect = Rectangle(3, "g")
+	Traceback (most recent call last):
+    	TypeError: height must be an integer
+
+	>>> rect = Rectangle(-3, 6)
+	Traceback (most recent call last):
+    	ValueError: width must be >= 0
+
+	>>> rect = Rectangle(3, -6)
+	Traceback (most recent call last):
+    	ValueError: height must be >= 0
+
+	>>> rect = Rectangle(0, 6)
+
+Area and Perimeter
+================
+
+	>>> my_rectangle = Rectangle(2, 4)
+	>>> print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
+	Area: 8 - Perimeter: 12
+
+	>>> my_rectangle = Rectangle(0, 4)
+	>>> print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
+	Area: 0 - Perimeter: 0
+
+	>>> my_rectangle = Rectangle(6, 0)
+	>>> print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
+	Area: 0 - Perimeter: 0
+
+	>>> my_rectangle.width = 10
+	>>> my_rectangle.height = 3
+	>>> print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
+	Area: 30 - Perimeter: 26
+
+String representation
+================
+
+	>>> my_rectangle = Rectangle(2, 4)
+	>>> print(str(my_rectangle))
+	##
+	##
+	##
+	##
+
+	>>> my_rectangle = Rectangle(0, 4)
+	>>> print(str(my_rectangle))
+	<BLANKLINE>
+
+Eval is magic
+================
+	>>> my_rectangle = Rectangle(2, 4)
+	>>> print(repr(my_rectangle))
+	Rectangle(2, 4)
+
+	>>> new_rectangle = eval(repr(my_rectangle))
+	>>> print(new_rectangle is my_rectangle)
+	False
+	>>> print(type(new_rectangle) is type(my_rectangle))
+	True
+
