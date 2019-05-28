@@ -10,7 +10,7 @@ Command to run check: python3 -m doctest -v ./tests/rectangle.txt
  Import
  =======
 ::
-	>>> Rectangle = __import__('4-rectangle').Rectangle
+	>>> Rectangle = __import__('5-rectangle').Rectangle
 
 Simple rectangle
 ================
@@ -30,7 +30,6 @@ Simple rectangle
 	Traceback (most recent call last):
     	ValueError: height must be >= 0
 
-	>>> rect = Rectangle(0, 6)
 
 Area and Perimeter
 ================
