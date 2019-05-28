@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Compare rectangles 
+"""Compare rectangles
 """
 
 
@@ -47,7 +47,7 @@ class Rectangle:
             return rect_1
         else:
             return rect_2
-    
+
     @property
     def width(self):
         return self.__width
@@ -78,5 +78,4 @@ class Rectangle:
     def perimeter(self):
         if self.__height == 0 or self.__width == 0:
             return 0
-        return (self.__height * 2 ) + (self.__width * 2)
-        
+        return (self.__height * 2)+(self.__width * 2)
