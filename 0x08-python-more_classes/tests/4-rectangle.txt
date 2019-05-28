@@ -5,7 +5,7 @@
  This library is very simple, since it only has one class called
  ``def width(self, value)``.
 
-Command to run check: python3 -m doctest -v ./tests/4-4-4-4-rectangle.txt
+Command to run check: python3 -m doctest -v ./tests/4-rectangle.txt
 
  Import
  =======

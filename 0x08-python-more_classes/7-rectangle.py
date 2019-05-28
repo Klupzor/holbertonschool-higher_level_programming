@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Change representation 
+"""Change representation
 """
 
 
@@ -37,7 +37,6 @@ class Rectangle:
         type(self).number_of_instances -= 1
         print("Bye rectangle...")
 
-
     @property
     def width(self):
         return self.__width
@@ -68,5 +67,4 @@ class Rectangle:
     def perimeter(self):
         if self.__height == 0 or self.__width == 0:
             return 0
-        return (self.__height * 2 ) + (self.__width * 2)
-        
+        return (self.__height * 2)+(self.__width * 2)
