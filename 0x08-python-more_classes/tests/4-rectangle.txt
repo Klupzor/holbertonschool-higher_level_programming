@@ -10,7 +10,7 @@ Command to run check: python3 -m doctest -v ./tests/4-rectangle.txt
  Import
  =======
 ::
-	>>> Rectangle = __import__('4-rectangle').Rectangle
+	>>> Rectangle = __import__('2-rectangle').Rectangle
 
 Simple rectangle
 ================
@@ -38,6 +38,10 @@ Area and Perimeter
 	>>> my_rectangle = Rectangle(2, 4)
 	>>> print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
 	Area: 8 - Perimeter: 12
+
+	>>> my_rectangle = Rectangle(2, 4)
+	>>> print(my_rectangle.height)
+	4
 
 	>>> my_rectangle = Rectangle(0, 4)
 	>>> print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
