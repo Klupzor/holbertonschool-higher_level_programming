@@ -10,5 +10,5 @@ def read_lines(filename="", nb_lines=0):
                 ofile = f.readline()
                 print(ofile, end="")
         else:
-                ofile = f.read()
-                print(ofile, end="")
+            ofile = f.read()
+            print(ofile, end="")
