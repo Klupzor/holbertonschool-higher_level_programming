@@ -5,7 +5,7 @@ load_from_json_file = __import__('8-load_from_json_file').load_from_json_file
 '''Load, add, save
 '''
 
-if __name__ == '__main':
+if __name__ == '__main__':
     filename = "add_item.json"
     my_list = sys.argv[1:]
 
