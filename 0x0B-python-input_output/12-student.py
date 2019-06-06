@@ -10,7 +10,7 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        if attrs:
+        if type(attrs) == list:
             ndict = {}
             for key in attrs:
                 if type(key) != str:
