@@ -13,6 +13,8 @@ class Student:
         if attrs:
             ndict = {}
             for key in attrs:
+                if type(key) != str:
+                    break
                 if key in self.__dict__.keys():
                     ndict[key] = self.__dict__[key]
             return ndict
