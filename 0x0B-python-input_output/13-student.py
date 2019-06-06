@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''Student to JSON with filter
+'''Student to disk and reload
 '''
 
 
@@ -18,3 +18,8 @@ class Student:
             return ndict
         else:
             return self.__dict__
+
+    def reload_from_json(self, json):
+        for key in json.keys():
+            if key in self.__dict__.keys():
+                self.__dict__[key] = json[key]
