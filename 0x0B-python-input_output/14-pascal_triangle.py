@@ -4,19 +4,19 @@
 
 
 def pascal_triangle(n):
-    triangle =[]
+    triangle = []
     if n <= 0:
-        return triangle;
+        return triangle
     li = [1]
     triangle.append(li)
     if n == 1:
-        return triangle;
+        return triangle
     i = 0
     for tr in triangle:
         size = len(tr)
         li = [1]
         for cont in range(size):
-            if  cont >= size - 1:
+            if cont >= size - 1:
                 li.append(1)
             else:
                 li.append(tr[cont] + tr[cont + 1])
@@ -24,6 +24,3 @@ def pascal_triangle(n):
         i += 1
         if i == n - 1:
             return triangle
-            
-
-print(pascal_triangle(5))
