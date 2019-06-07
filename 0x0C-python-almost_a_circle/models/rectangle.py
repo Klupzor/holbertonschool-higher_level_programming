@@ -12,6 +12,11 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
+    def __str__(self):
+        ms = "[Rectangle] ({}) {}/{} - {}/{}"
+        return ms.format(self.id, self.__x, self.__y,
+                         self.__width, self.__height)
+
     def __validate_input(self, name, value):
         if type(value) != int:
             raise TypeError(name + " must be an integer")
@@ -60,3 +65,9 @@ class Rectangle(Base):
 
     def area(self):
         return self.__width * self.__height
+
+    def display(self):
+        for row in range(self.__height):
+            for col in range(self.width):
+                print("#", end="")
+            print()
