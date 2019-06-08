@@ -75,3 +75,11 @@ class Rectangle(Base):
             for col in range(self.width):
                 print("#", end="")
             print()
+
+    def update(self, *args):
+        arg = [self.id, self.__width, self.__height, self.__x, self.__y]
+        aux = []
+        for val in args:
+            aux.append(val)
+        aux.extend(arg[len(args):])
+        self.id, self.__width, self.__height, self.__x, self.__y = aux
