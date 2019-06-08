@@ -15,7 +15,7 @@ class Rectangle(Base):
     def __str__(self):
         ms = "[Rectangle] ({}) {}/{} - {}/{}"
         return ms.format(self.id, self.__x, self.__y,
-                         self.__width, self.__height)
+                self.__width, self.__height)
 
     def __validate_input(self, name, value):
         if type(value) != int:
@@ -76,10 +76,19 @@ class Rectangle(Base):
                 print("#", end="")
             print()
 
-    def update(self, *args):
-        arg = [self.id, self.__width, self.__height, self.__x, self.__y]
-        aux = []
-        for val in args:
-            aux.append(val)
-        aux.extend(arg[len(args):])
-        self.id, self.__width, self.__height, self.__x, self.__y = aux
+    def update(self, *args, **kwargs):
+        if args:
+            arg = [self.id, self.__width, self.__height, self.__x, self.__y]
+            aux = []
+            for val in args:
+                aux.append(val)
+            aux.extend(arg[len(args):])
+            self.id, self.__width, self.__height, self.__x, self.__y = aux
+        else:
+            dic = self.__dict__.copy()
+            dic.update(kwargs)
+            self.id = dic['id']
+            self.width = dic['wid']
+
+    def pri(self):
+        print(self.__dict__)
