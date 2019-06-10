@@ -12,3 +12,12 @@ class Square(Rectangle):
         ms = "[Square] ({}) {}/{} - {}"
         return ms.format(self.id, self.x, self.y,
                 self.width)
+
+    @property
+    def size(self):
+        return super().width
+
+    @size.setter
+    def size(self, value):
+        Rectangle.width.fset(self, value)
+        Rectangle.height.fset(self, value)
