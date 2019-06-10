@@ -21,3 +21,14 @@ class Square(Rectangle):
     def size(self, value):
         Rectangle.width.fset(self, value)
         Rectangle.height.fset(self, value)
+
+    def update(self, *args, **kwargs):
+        if args:
+            c = 0
+            key = ['id', 'size', 'x', 'y']
+            for val in args:
+                setattr(self, key[c], val)
+                c += 1
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
