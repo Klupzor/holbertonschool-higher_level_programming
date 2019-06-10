@@ -33,15 +33,15 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        return self.height
+        return self.__height
 
     @property
     def x(self):
-        return self.x
+        return self.__x
 
     @property
     def y(self):
-        return self.y
+        return self.__y
 
     @width.setter
     def width(self, value):
@@ -87,6 +87,3 @@ class Rectangle(Base):
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
-
-    def pri(self):
-        print(self.__dict__)
