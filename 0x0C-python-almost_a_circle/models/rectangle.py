@@ -85,10 +85,8 @@ class Rectangle(Base):
             aux.extend(arg[len(args):])
             self.id, self.__width, self.__height, self.__x, self.__y = aux
         else:
-            dic = self.__dict__.copy()
-            dic.update(kwargs)
-            self.id = dic['id']
-            self.width = dic['wid']
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     def pri(self):
         print(self.__dict__)
