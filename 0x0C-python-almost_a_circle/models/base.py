@@ -31,7 +31,6 @@ class Base:
         jlist = []
         with open(filename, 'w', encoding="utf-8") as f:
             if list_objs is not None:
-                print("entro")
                 for obj in list_objs:
                     jlist.append(obj.to_dictionary())
             f.write(cls.to_json_string(jlist))
