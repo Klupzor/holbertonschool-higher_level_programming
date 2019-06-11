@@ -56,6 +56,9 @@ class Base:
     def load_from_file(cls):
         '''load from json'''
         filename = cls.__name__ + '.json'
-        with open(filename, encoding="UTF8") as f:
-            strjson = cls.from_json_string(f.read())
-            return list(map(lambda dic: cls.create(**dic), strjson))
+        try:
+            with open(filename, encoding="UTF8") as f:
+                strjson = cls.from_json_string(f.read())
+                return list(map(lambda dic: cls.create(**dic), strjson))
+        except FileNotFoundError:
+            return []
