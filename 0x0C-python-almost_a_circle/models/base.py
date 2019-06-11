@@ -25,3 +25,12 @@ class Base:
             for obj in list_objs:
                 jlist.append(obj.to_dictionary())
             f.write(str(jlist))
+
+    def from_json_string(json_string):
+        return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        dummy = cls(1, 1)
+        dummy.update(**dictionary)
+        return dummy
