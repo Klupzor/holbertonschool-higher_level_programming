@@ -13,8 +13,7 @@ class Square(Rectangle):
     def __str__(self):
         '''this is a comment'''
         ms = "[Square] ({}) {}/{} - {}"
-        return ms.format(self.id, self.x, self.y,
-                self.width)
+        return ms.format(self.id, self.x, self.y, self.width)
 
     @property
     def size(self):
