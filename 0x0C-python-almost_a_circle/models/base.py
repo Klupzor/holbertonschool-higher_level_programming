@@ -2,6 +2,7 @@
 '''Base class
 '''
 import json
+import csv
 
 
 class Base:
@@ -62,3 +63,31 @@ class Base:
                 return list(map(lambda dic: cls.create(**dic), strjson))
         except FileNotFoundError:
             return []
+
+    @classmethod
+    def load_from_file_csv(cls):
+        '''save file csv'''
+        filename = cls.__name__ + '.csv'
+        try:
+            with open(filename, 'r', encoding="UTF8") as f:
+                strcsv = csv.DictReader(f)
+                dictlist = list(map(lambda dic: dic, strcsv))
+                intList = [dict([key, int(val)]
+                                for key, val in y.items()) for y in dictlist]
+                return list(map(lambda dic: cls.create(**dic), intList))
+        except FileNotFoundError:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        '''Save to file'''
+        filename = cls.__name__ + ".csv"
+        jlist = []
+        with open(filename, 'w', encoding="utf-8") as f:
+            if list_objs is not None:
+                for obj in list_objs:
+                    jlist.append(obj.to_dictionary())
+            keys = jlist[0].keys()
+            new_dic = csv.DictWriter(f, keys)
+            new_dic.writeheader()
+            new_dic.writerows(jlist)
