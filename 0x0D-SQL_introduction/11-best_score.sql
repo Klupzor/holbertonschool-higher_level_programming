@@ -1,2 +1,2 @@
--- lists all rows of the table first_table
+-- script that lists all records with a score >= 10
 SELECT score, name FROM second_table WHERE score >= 10
