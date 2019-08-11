@@ -11,7 +11,7 @@ if __name__ == '__main__':
             port=3306)
 
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%'")
+    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id")
     rows = cur.fetchall()
     for row in rows:
         print(row)
