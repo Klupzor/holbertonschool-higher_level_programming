@@ -9,7 +9,7 @@ module.exports = class Square extends SquareF {
   }
 
   charPrint (c) {
-    if (typeof c === 'string') {
+    if (typeof c === 'string' && c.length === 1) {
       for (let i = 0; i < this.size; i++) {
         console.log(c.repeat(this.size));
       }
